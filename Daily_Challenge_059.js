@@ -1,22 +1,23 @@
-// All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+// This kata is from check py.checkio.org
 
-// Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+// You are given an array with positive numbers and a non-negative number N. You should find the N-th power of the element in the array with the index N. If N is outside of the array, then return -1. Don't forget that the first element has the index 0.
 
-// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+// Let's look at a few examples:
 
-function feast(beast, dish) {
-  //trim white space from the beginning and end 
-  //check the first and last letter of beast and dish
-  //if the same - return true
-  //else false 
+// array = [1, 2, 3, 4] and N = 2, then the result is 3^2 == 9;
+// array = [1, 2, 3] and N = 3, but N is outside of the array, so the result is -1.
 
-  let tBeast = beast.trim().charAt(beast.length -1) + beast.charAt(0)
-  let tDish = dish.trim().charAt(dish.length -1) + dish.charAt(0)
+function index(array, n){
+
+    let numPos = array[n]
   
-  if (tBeast === tDish){
-    return true
-  } else{
-    return false
+    //if the position exists return n-th power of the positon 
+  
+    if (numPos){
+      return Math.pow(numPos,n)
+    } else{
+      //else return -1
+      return -1
+    }
+    
   }
-  
-}

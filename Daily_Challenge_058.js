@@ -1,22 +1,12 @@
-// All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+// write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
 
-// Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+// the string should start with a 1.
 
-// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+// a string with size 6 should return :'101010'.
 
-function feast(beast, dish) {
-  //trim white space from the beginning and end 
-  //check the first and last letter of beast and dish
-  //if the same - return true
-  //else false 
+// with size 4 should return : '1010'.
 
-  let tBeast = beast.trim().charAt(beast.length -1) + beast.charAt(0)
-  let tDish = dish.trim().charAt(dish.length -1) + dish.charAt(0)
-  
-  if (tBeast === tDish){
-    return true
-  } else{
-    return false
-  }
-  
-}
+// with size 12 should return : '101010101010'.
+
+// The size will always be positive and will only use whole numbers.
+
